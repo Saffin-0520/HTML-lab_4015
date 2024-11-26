@@ -1,0 +1,59 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         version="3.0">
+    
+    <display-name>SessionHandlingApp</display-name>
+    
+    <!-- Cookie Servlet -->
+    <servlet>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookieServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- HttpSession Servlet -->
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>SessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/sessionServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- URL Rewriting Servlet -->
+    <servlet>
+        <servlet-name>URLRewritingServlet</servlet-name>
+        <servlet-class>URLRewritingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>URLRewritingServlet</servlet-name>
+        <url-pattern>/urlRewritingServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Next Page Servlet for URL Rewriting -->
+    <servlet>
+        <servlet-name>NextPageServlet</servlet-name>
+        <servlet-class>NextPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NextPageServlet</servlet-name>
+        <url-pattern>/nextPageServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Hidden Field Servlet -->
+    <servlet>
+        <servlet-name>HiddenFieldServlet</servlet-name>
+        <servlet-class>HiddenFieldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HiddenFieldServlet</servlet-name>
+        <url-pattern>/hiddenFieldServlet</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
