@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bikes>
+    <bike>
+        <name>Yamaha FZ-X</name>
+        <price>150,000</price>
+        <color>Matte Black</color>
+    </bike>
+    <bike>
+        <name>Yamaha MT-15</name>
+        <price>170,000</price>
+        <color>Metallic Blue</color>
+    </bike>
+    <bike>
+        <name>Yamaha R15 V4</name>
+        <price>180,000</price>
+        <color>Racing Blue</color>
+    </bike>
+</bikes>
