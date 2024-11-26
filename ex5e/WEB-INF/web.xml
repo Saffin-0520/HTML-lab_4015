@@ -1,0 +1,10 @@
+<web-app>
+    <servlet>
+        <servlet-name>PageCounterServlet</servlet-name>
+        <servlet-class>PageCounterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PageCounterServlet</servlet-name>
+        <url-pattern>/pageCounter</url-pattern>
+    </servlet-mapping>
+</web-app>
