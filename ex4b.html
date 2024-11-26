@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Shop</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .bike-image:hover + .hover-text {
+            display: block;
+        }
+        .hover-text {
+            display: none;
+            font-size: 16px;
+            color: #13d4b4;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dynamic-time {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .text-hover {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #e11a1a;
+            cursor: pointer;
+        }
+        .bike-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BIKE SHOP</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- Dynamic Time -->
+        <div class="dynamic-time" id="dynamicTime"></div>
+
+        <center>
+            <h2>FEATURED BIKE</h2>
+            <img src="bike.png" alt="Bike Image" class="bike-image">
+            <div class="hover-text">The Yamaha FZ-X is a powerful and stylish bike!</div>
+        </center>
+
+        <!-- Change Background Color -->
+        <div class="change-bg" onclick="changeBackgroundColor()" style="text-align: center; margin: 20px;">
+            <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Click to Change Background Color</button>
+        </div>
+
+        <!-- Change Text on Hover -->
+        <div class="text-hover" id="hoverText">Hover over me to change the text!</div>
+
+        <div class="bike-info">
+            <h2>Yamaha FZ-X</h2>
+            <p>The Yamaha FZ-X is a powerful and stylish motorcycle that combines modern design with advanced features for an exhilarating ride.</p>
+            <a href="https://global.yamaha-motor.com/business/mc/" style="color: #0066cc; text-decoration: none;">Learn More</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Bike Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamic Time Display
+        function updateTime() {
+            const timeElement = document.getElementById('dynamicTime');
+            const now = new Date();
+            timeElement.textContent = `Current Time: ${now.toLocaleTimeString()}`;
+        }
+        setInterval(updateTime, 1000);
+
+        // Change Background Color
+        function changeBackgroundColor() {
+            const colors = ['#ffde59', '#d1f5ff', '#ffc1e3', '#c4ffca'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // Change Text on Hover
+        const hoverText = document.getElementById('hoverText');
+        hoverText.addEventListener('mouseover', () => {
+            hoverText.textContent = 'Thanks for hovering!';
+        });
+        hoverText.addEventListener('mouseout', () => {
+            hoverText.textContent = 'Hover over me to change the text!';
+        });
+    </script>
+</body>
+</html>
